@@ -1,0 +1,317 @@
+[
+    {
+        "id": 0,
+        "nome": "testando o patch",
+        "raridade": "Super Raro",
+        "descricao": "Teste de DB",
+        "tipo": "Teste"
+    },
+    {
+        "id": 1,
+        "nome": "Adamantine Armor",
+        "raridade": "Uncommon",
+        "descricao": "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you’re wearing it, any critical hit against you becomes a normal hit.",
+        "tipo": "Armor (medium or heavy, but not hide)"
+    },
+    {
+        "id": 2,
+        "nome": "Ammunition, +1, +2, or +3",
+        "raridade": "Uncommon (+1), rare (+2), or very rare (+3)",
+        "descricao": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical.",
+        "tipo": "Weapon (any ammunition)"
+    },
+    {
+        "id": 3,
+        "nome": "Amulet of Health",
+        "raridade": "Rare (requires attunement)",
+        "descricao": "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 4,
+        "nome": "Amulet of Proof against Detection and Location",
+        "raridade": "Uncommon (requires attunement)",
+        "descricao": "While wearing this amulet, you are hidden from divination magic. You can’t be targeted by such magic or perceived through magical scrying sensors.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 5,
+        "nome": "Amulet of the Planes",
+        "raridade": "Very rare (requires attunement)",
+        "descricao": "While wearing this amulet, you can use an action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence check. On a successful check, you cast the plane shift spell. On a failure, you and each creature and object within 15 feet of you travel to a random destination. Roll a d100. On a 1–60, you travel to a random location on the plane you named. On a 61–100, you travel to a randomly determined plane of existence.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 6,
+        "nome": "Animated Shield",
+        "raridade": "Very rare (requires attunement)",
+        "descricao": "While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free.",
+        "tipo": "Armor (shield)"
+    },
+    {
+        "id": 7,
+        "nome": "Apparatus of the Crab",
+        "raridade": "Legendary",
+        "descricao": "This item first appears to be a Large sealed iron barrel weighing 500 pounds. The barrel has a hidden catch, which can be found with a successful DC 20 Intelligence (Investigation) check. Releasing the catch unlocks a hatch at one end of the barrel, allowing two Medium or smaller creatures to crawl inside. Ten levers are set in a row at the far end, each in a neutral position, able to move either up or down. When certain levers are used, the apparatus transforms to resemble a giant lobster.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 8,
+        "nome": "Boots of Elvenkind",
+        "raridade": "Uncommon",
+        "descricao": "While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have advantage on Dexterity (Stealth) checks that rely on moving silently.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 9,
+        "nome": "Boots of Striding and Springing",
+        "raridade": "Uncommon (requires attunement)",
+        "descricao": "While you wear these boots, your walking speed becomes 30 feet, unless your walking speed is higher, and your speed isn't reduced if you are encumbered or wearing heavy armor. In addition, you can jump three times the normal distance, though you can't jump farther than your remaining movement would allow.",
+        "tipo": "Armor"
+    },
+    {
+        "id": 10,
+        "nome": "Cape of the Mountebank",
+        "raridade": "Rare (requires attunement)",
+        "descricao": "While wearing this cape, you can use an action to cast the dimension door spell, with the cape serving as the spell's focus. This property of the cape can't be used again until the next dawn.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 11,
+        "nome": "Censer of Controlling Air Elementals",
+        "raridade": "Rare",
+        "descricao": "While incense is burning in this censer, you can use an action to speak the censer's command word and summon an air elemental, as if you had cast the conjure elemental spell. The censer can't be used this way again until the next dawn.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 12,
+        "nome": "Chime of Opening",
+        "raridade": "Uncommon",
+        "descricao": "This hollow metal tube measures about 1 foot long and weighs 1 pound. You can strike it as an action, pointing it at an object within 120 feet of you that can be opened, such as a door, lid, or lock. The chime issues a clear tone, and one lock or latch on the object opens unless the sound can't reach the object. If no locks or latches remain, the object itself opens.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 13,
+        "nome": "Circlet of Blasting",
+        "raridade": "Uncommon",
+        "descricao": "While wearing this circlet, you can use an action to cast the scorching ray spell with it. When you make the spell's attacks, you do so with an attack bonus of +5. The circlet can't be used this way again until the next dawn.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 14,
+        "nome": "Deck of Illusions",
+        "raridade": "Rare",
+        "descricao": "This box contains a set of parchment cards. A full deck has 34 cards. When a card is drawn at random and thrown to the ground, a creature is conjured forth. The creature is determined by the card's suit.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 15,
+        "nome": "Dimensional Shackles",
+        "raridade": "Rare",
+        "descricao": "You can use an action to place these shackles on an incapacitated creature. The shackles adjust to fit a creature of Small to Large size. In addition to serving as mundane manacles, the shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 16,
+        "nome": "Dragon Slayer",
+        "raridade": "Rare",
+        "descricao": "You gain a +1 bonus to attack and damage rolls made with this magic weapon. When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.",
+        "tipo": "Weapon (any sword)"
+    },
+    {
+        "id": 17,
+        "nome": "Boots of the Winterlands",
+        "raridade": "Uncommon (requires attunement)",
+        "descricao": "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits:",
+        "conteudo": [
+            "You have resistance to cold damage.",
+            "You ignore difficult terrain created by ice or snow.",
+            "You can tolerate temperatures as low as −50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as −100 degrees Fahrenheit."
+        ],
+        "tipo": "Armor"
+    },
+    {
+        "id": 18,
+        "nome": "Bowl of Commanding Water Elementals",
+        "raridade": "Rare",
+        "descricao": "While this bowl is filled with water, you can use an action to speak the bowl’s command word and summon a water elemental, as if you had cast the conjure elemental spell. The bowl can’t be used this way again until the next dawn.",
+        "conteudo": [
+            "The bowl is about 1 foot in diameter and half as deep.",
+            "It weighs 3 pounds and holds about 3 gallons."
+        ],
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 19,
+        "nome": "Bracers of Archery",
+        "raridade": "Uncommon (requires attunement)",
+        "descricao": "While wearing these bracers, you have proficiency with the longbow and shortbow, and you gain a +2 bonus to damage rolls on ranged attacks made with such weapons.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 20,
+        "nome": "Bracers of Defense",
+        "raridade": "Rare (requires attunement)",
+        "descricao": "While wearing these bracers, you gain a +2 bonus to AC if you are wearing no armor and using no shield.",
+        "tipo": "Armor"
+    },
+    {
+        "id": 21,
+        "nome": "Brazier of Commanding Fire Elementals",
+        "raridade": "Rare",
+        "descricao": "While a fire burns in this brass brazier, you can use an action to speak the brazier’s command word and summon a fire elemental, as if you had cast the conjure elemental spell. The brazier can’t be used this way again until the next dawn.",
+        "conteudo": [
+            "The brazier weighs 5 pounds."
+        ],
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 22,
+        "nome": "Brooch of Shielding",
+        "raridade": "Uncommon (requires attunement)",
+        "descricao": "While wearing this brooch, you have resistance to force damage, and you have immunity to damage from the magic missile spell.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 23,
+        "nome": "Broom of Flying",
+        "raridade": "Uncommon",
+        "descricao": "This wooden broom, which weighs 3 pounds, functions like a mundane broom until you stand astride it and speak its command word. It then hovers beneath you and can be ridden in the air. It has a flying speed of 50 feet. It can carry up to 400 pounds, but its flying speed becomes 30 feet while carrying over 200 pounds. The broom stops hovering when you land.",
+        "conteudo": [
+            "You can send the broom to travel alone to a destination within 1 mile of you if you speak the command word, name the location, and are familiar with that place.",
+            "The broom comes back to you when you speak another command word, provided that the broom is still within 1 mile of you."
+        ],
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 24,
+        "nome": "Cloak of Arachnida",
+        "raridade": "Very Rare",
+        "descricao": "This fine garment is made of black silk interwoven with faint silvery threads. While wearing it, you gain the following benefits:\n- You have resistance to poison damage.\n- You have a climbing speed equal to your walking speed.\n- You can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free.\n- You can’t be caught in webs of any sort and can move through webs as if they were difficult terrain.\n- You can use an action to cast the web spell (save DC 13). The web created by the spell fills twice its normal area. Once used, this property of the cloak can’t be used again until the next dawn.",
+        "tipo": "Wondrous item (requires attunement)"
+    },
+    {
+        "id": 25,
+        "nome": "Cloak of Displacement",
+        "raridade": "Rare",
+        "descricao": "While you wear this cloak, it projects an illusion that makes you appear to be standing in a place near your actual location, causing any creature to have disadvantage on attack rolls against you. If you take damage, the property ceases to function until the start of your next turn. This property is suppressed while you are incapacitated, restrained, or otherwise unable to move.",
+        "tipo": "Wondrous item (requires attunement)"
+    },
+    {
+        "id": 26,
+        "nome": "Cloak of Elvenkind",
+        "raridade": "Uncommon",
+        "descricao": "While you wear this cloak with its hood up, Wisdom (Perception) checks made to see you have disadvantage, and you have advantage on Dexterity (Stealth) checks made to hide, as the cloak’s color shifts to camouflage you. Pulling the hood up or down requires an action.",
+        "tipo": "Wondrous item (requires attunement)"
+    },
+    {
+        "id": 27,
+        "nome": "Cloak of Protection",
+        "raridade": "Uncommon",
+        "descricao": "You gain a +1 bonus to AC and saving throws while you wear this cloak.",
+        "tipo": "Wondrous item (requires attunement)"
+    },
+    {
+        "id": 28,
+        "nome": "Cloak of the Bat",
+        "raridade": "Rare",
+        "descricao": "While wearing this cloak, you have advantage on Dexterity (Stealth) checks. In an area of dim light or darkness, you can grip the edges of the cloak with both hands and use it to fly at a speed of 40 feet. If you ever fail to grip the cloak’s edges while flying in this way, or if you are no longer in dim light or darkness, you lose this flying speed.\nWhile wearing the cloak in an area of dim light or darkness, you can use your action to cast polymorph on yourself, transforming into a bat. While you are in the form of the bat, you retain your Intelligence, Wisdom, and Charisma scores. The cloak can’t be used this way again until the next dawn.",
+        "tipo": "Wondrous item (requires attunement)"
+    },
+    {
+        "id": 29,
+        "nome": "Cloak of the Manta Ray",
+        "raridade": "Uncommon",
+        "descricao": "While wearing this cloak with its hood up, you can breathe underwater, and you have a swimming speed of 60 feet. Pulling the hood up or down requires an action.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 30,
+        "nome": "Crystal Ball",
+        "raridade": "Very Rare or Legendary",
+        "descricao": "The typical crystal ball, a very rare item, is about 6 inches in diameter. While touching it, you can cast the scrying spell (save DC 17) with it.\nThe following crystal ball variants are legendary items and have additional properties.\nCrystal Ball of Mind Reading. You can use an action to cast the detect thoughts spell (save DC 17) while you are scrying with the crystal ball, targeting creatures you can see within 30 feet of the spell’s sensor. You don’t need to concentrate on this detect thoughts to maintain it during its duration, but it ends if scrying ends.\nCrystal Ball of Telepathy. While scrying with the crystal ball, you can communicate telepathically with creatures you can see within 30 feet of the spell’s sensor. You can also use an action to cast the suggestion spell (save DC 17) through the sensor on one of those creatures. You don’t need to concentrate on this suggestion to maintain it during its duration, but it ends if scrying ends. Once used, the suggestion power of the crystal ball can’t be used again until the next dawn.\nCrystal Ball of True Seeing. While scrying with the crystal ball, you have truesight with a radius of 120 feet centered on the spell’s sensor.",
+        "tipo": "Wondrous item (requires attunement)"
+    },
+    {
+        "id": 31,
+        "nome": "Cube of Force",
+        "raridade": "Rare",
+        "descricao": "This cube is about an inch across. Each face has a distinct marking on it that can be pressed. The cube starts with 36 charges, and it regains 1d20 expended charges daily at dawn.\nYou can use an action to press one of the cube’s faces, expending a number of charges based on the chosen face, as shown in the Cube of Force Faces table. Each face has a different effect. If the cube has insufficient charges remaining, nothing happens. Otherwise, a barrier of invisible force springs into existence, forming a cube 15 feet on a side. The barrier is centered on you, moves with you, and lasts for 1 minute, until you use an action to press the cube’s sixth face, or the cube runs out of charges. You can change the barrier’s effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration.\nIf your movement causes the barrier to come into contact with a solid object that can’t pass through the cube, you can’t move any closer to that object as long as the barrier remains.",
+        "tipo": "Wondrous item (requires attunement)"
+    },
+    {
+        "id": 32,
+        "nome": "Cubic Gate",
+        "raridade": "Legendary",
+        "descricao": "This cube is 3 inches across and radiates palpable magical energy. The six sides of the cube are each keyed to a different plane of existence, one of which is the Material Plane. The other sides are linked to planes determined by the GM.",
+        "uso": "You can use an action to press one side of the cube to cast the gate spell with it, opening a portal to the plane keyed to that side. Alternatively, if you use an action to press one side twice, you can cast the plane shift spell (save DC 17) with the cube and transport the targets to the plane keyed to that side.",
+        "cargas": "The cube has 3 charges. Each use of the cube expends 1 charge. The cube regains 1d3 expended charges daily at dawn.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 33,
+        "nome": "Dagger of Venom",
+        "raridade": "Rare",
+        "descricao": "You gain a +1 bonus to attack and damage rolls made with this magic weapon.",
+        "uso": "You can use an action to cause thick, black poison to coat the blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 poison damage and become poisoned for 1 minute. The dagger can’t be used this way again until the next dawn.",
+        "tipo": "Weapon (dagger)"
+    },
+    {
+        "id": 34,
+        "nome": "Dancing Sword",
+        "raridade": "Very rare (requires attunement)",
+        "descricao": "You can use a bonus action to toss this magic sword into the air and speak the command word. When you do so, the sword begins to hover, flies up to 30 feet, and attacks one creature of your choice within 5 feet of it. The sword uses your attack roll and ability score modifier to damage rolls.",
+        "uso": "While the sword hovers, you can use a bonus action to cause it to fly up to 30 feet to another spot within 30 feet of you. As part of the same bonus action, you can cause the sword to attack one creature within 5 feet of it.\nAfter the hovering sword attacks for the fourth time, it flies up to 30 feet and tries to return to your hand. If you have no hand free, it falls to the ground at your feet. If the sword has no unobstructed path to you, it moves as close to you as it can and then falls to the ground. It also ceases to hover if you grasp it or move more than 30 feet away from it.",
+        "tipo": "Weapon (any sword)"
+    },
+    {
+        "id": 35,
+        "nome": "Decanter of Endless Water",
+        "raridade": "Uncommon",
+        "descricao": "This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds.",
+        "uso": "You can use an action to remove the stopper and speak one of three command words, whereupon an amount of fresh water or salt water (your choice) pours out of the flask. The water stops pouring out at the start of your next turn. Choose from the following options:\n- 'Stream' produces 1 gallon of water.\n- 'Fountain' produces 5 gallons of water.\n- 'Geyser' produces 30 gallons of water that gushes forth in a geyser 30 feet long and 1 foot wide. As a bonus action while holding the decanter, you can aim the geyser at a creature you can see within 30 feet of you. The target must succeed on a DC 13 Strength saving throw or take 1d4 bludgeoning damage and fall prone. Instead of a creature, you can target an object that isn’t being worn or carried and that weighs no more than 200 pounds. The object is either knocked over or pushed up to 15 feet away from you.",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 36,
+        "nome": "Dust of Disappearance",
+        "descricao": "Found in a small packet, this powder resembles very fine sand. There is enough of it for one use. When you use an action to throw the dust into the air, you and each creature and object within 10 feet of you become invisible for 2d4 minutes. The duration is the same for all subjects, and the dust is consumed when its magic takes effect. If a creature affected by the dust attacks or casts a spell, the invisibility ends for that creature.",
+        "raridade": "Uncommon",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 37,
+        "nome": "Dust of Dryness",
+        "descricao": "This small packet contains 1d6 + 4 pinches of dust. You can use an action to sprinkle a pinch of it over water. The dust turns a cube of water 15 feet on a side into one marble-sized pellet, which floats or rests near where the dust was sprinkled. The pellets weight is negligible. Someone can use an action to smash the pellet against a hard surface, causing the pellet to shatter and release the water the dust absorbed. Doing so ends that pellets magic. An elemental composed mostly of water that is exposed to a pinch of the dust must make a DC 13 Constitution saving throw, taking 10d6 necrotic damage on a failed save, or half as much damage on a successful one.",
+        "raridade": "Uncommon",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 38,
+        "nome": "Dust of Sneezing and Choking",
+        "descricao": "Found in a small container, this powder resembles very fine sand. It appears to be dust of disappearance, and an identify spell reveals it to be such. There is enough of it for one use. When you use an action to throw a handful of the dust into the air, you and each creature that needs to breathe within 30 feet of you must succeed on a DC 15 Constitution saving throw or become unable to breathe, while sneezing uncontrollably. A creature affected in this way is incapacitated and suffocating. As long as it is conscious, a creature can repeat the saving throw at the end of each of its turns, ending the effect on it on a success. The lesser restoration spell can also end the effect on a creature.",
+        "raridade": "Uncommon",
+        "tipo": "Wondrous item"
+    },
+    {
+        "id": 39,
+        "nome": "Dwarven Plate",
+        "descricao": "While wearing this armor, you gain a +2 bonus to AC. In addition, if an effect moves you against your will along the ground, you can use your reaction to reduce the distance you are moved by up to 10 feet.",
+        "raridade": "Very rare",
+        "tipo": "Armor (plate)"
+    },
+    {
+        "id": 40,
+        "nome": "Dwarven Thrower",
+        "descricao": "You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 damage or, if the target is a giant, 2d8 damage. Immediately after the attack, the weapon flies back to your hand.",
+        "raridade": "Very rare",
+        "tipo": "Weapon (warhammer)"
+    },
+    {
+        "id": 41,
+        "nome": "Efficient Quiver",
+        "descricao": "Each of the quivers three compartments connects to an extradimensional space that allows the quiver to hold numerous items while never weighing more than 2 pounds. The shortest compartment can hold up to sixty arrows, bolts, or similar objects. The midsize compartment holds up to eighteen javelins or similar objects. The longest compartment holds up to six long objects, such as bows, quarterstaffs, or spears. You can draw any item the quiver contains as if doing so from a regular quiver or scabbard.",
+        "raridade": "Uncommon",
+        "tipo": "Wondrous item"
+    }
+]
