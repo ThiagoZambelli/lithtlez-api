@@ -8,6 +8,8 @@ const router = express.Router();
 
 router
   .get("/item", ItemController.listarItens)
+  .get("/item/busca", ItemController.filtrarItem)
+  .get("/item/pagina", ItemController.itensPorVez)
   .put("/item/:id", ItemController.atualizarItem)
   .get("/item/:id", ItemController.pegarItemPorId)
   .delete("/item/:id", ItemController.deletarItemPorId)

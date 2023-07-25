@@ -6,6 +6,7 @@ import db from "./config/dbItensConect.js";
 import routes from "./routes/index.js";
 import cors from "cors";
 import tratamentoDeErros from "./middlewares/tratamentoDeErros.js";
+import manipulador404 from "./middlewares/manipulador404.js";
 
 
 db.on("error", console.log.bind(console, "Erro de conexão"));
@@ -16,7 +17,10 @@ db.once("open", ()=>{
 const app = express();
 app.use(express.json());
 app.use(cors({origin: "*"}));
+
 routes(app);
+
+app.use(manipulador404);
 
 app.use(tratamentoDeErros);
 

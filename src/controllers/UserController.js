@@ -1,4 +1,5 @@
-import users from "../models/User.js";
+import PaginaNaoEncontrada from "../erros/PaginaNaoEncontrada.js";
+import { users } from "../models/index.js";
 
 class UserController {
   static validarUser = async (req, res, next) => {
@@ -8,7 +9,7 @@ class UserController {
       if (user) {
         res.status(200).json({ message: `'Usuário encontrado!' ${user}` });
       } else {
-        res.status(404).json({ message: "Usuário não encontrado." });
+        next(new PaginaNaoEncontrada("Email ou Senha Incorreto"));
       }
     } catch (err) {
       next(err);
@@ -17,11 +18,11 @@ class UserController {
 
   static cadastrarUser = async (req, res, next) => {
     let user = new users(req.body);
-    try{
+    try {
       await user.save();
-      res.status(201).json({menssage:"Usuario cadastrado com sucesso."});
+      res.status(201).json({ menssage: "Usuario cadastrado com sucesso." });
     }
-    catch(err){
+    catch (err) {
       next(err);
     }
   };
