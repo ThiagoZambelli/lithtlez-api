@@ -23,8 +23,7 @@ class UserController {
     const emailJaExiste = await users.find(busca);
 
     try {
-      if (emailJaExiste.length > 0) {
-        console.log(emailJaExiste);
+      if (emailJaExiste.length > 0) {        
         res.status(200).json({ menssage: "Email ja Cadastrado!" });
       } else {
         await user.save();
