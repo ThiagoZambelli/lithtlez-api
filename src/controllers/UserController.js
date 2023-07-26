@@ -18,9 +18,18 @@ class UserController {
 
   static cadastrarUser = async (req, res, next) => {
     let user = new users(req.body);
+    let busca = {};
+    busca.email = user.email;
+    const emailJaExiste = await users.find(busca);
+
     try {
-      await user.save();
-      res.status(201).json({ menssage: "Usuario cadastrado com sucesso." });
+      if (emailJaExiste.length > 0) {
+        console.log(emailJaExiste);
+        res.status(200).json({ menssage: "Email ja Cadastrado!" });
+      } else {
+        await user.save();
+        res.status(201).json({ menssage: "Usuario cadastrado com sucesso." });
+      }
     }
     catch (err) {
       next(err);
