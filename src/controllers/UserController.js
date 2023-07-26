@@ -24,7 +24,7 @@ class UserController {
 
     try {
       if (emailJaExiste.length > 0) {        
-        res.status(200).json({ menssage: "Email ja Cadastrado!" });
+        res.status(422).json({ menssage: "Este Email ja foi cadastrado!" });
       } else {
         await user.save();
         res.status(201).json({ menssage: "Usuario cadastrado com sucesso." });
