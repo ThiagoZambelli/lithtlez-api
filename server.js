@@ -4,5 +4,5 @@ import app from "./src/app.js";
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
-  console.log(`escutando na porta: ${port}`);
+  console.log(`Estamos escutando na porta: ${port}`);
 });
