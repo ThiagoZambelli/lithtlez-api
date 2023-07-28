@@ -17,16 +17,8 @@ db.once("open", ()=>{
 const app = express();
 app.use(express.json());
 app.use(cors({origin: "*"}));
-
 routes(app);
-
 app.use(manipulador404);
-
 app.use(tratamentoDeErros);
-
-
-
-
-
 
 export default app;
