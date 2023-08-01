@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import User from "../models/User.js";
+import jwt from "jsonwebtoken";
 
 class AuthController {
   static login = async (req, res, next) => {
@@ -17,7 +18,8 @@ class AuthController {
       if (!senhaIsValid) {
         res.status(202).send({ message: "Email ou senha Invalidos" });
       }
-      res.status(200).send({ message: "Login efetuado!" });
+      const token = genereteToken(user._id);
+      res.status(200).send({token: token});
     }
     catch (err) {
       next(err);
@@ -25,4 +27,5 @@ class AuthController {
   };
 }
 
+const genereteToken = (id) => jwt.sign({ id: id }, process.env.SECRET_JWT, { expiresIn: 86400 });
 export default AuthController;
