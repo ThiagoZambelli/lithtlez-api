@@ -2,6 +2,9 @@ import express from "express";
 import ItensRoutes from "./ItensRoutes.js";
 import UsersRoutes from "./UserRoutes.js";
 import AuthRoutes from "./AuthRoutes.js";
+import RacaRoutes from "./RacasRoutes.js";
+import ClasseRouter from "./ClasseRoutes.js";
+import AntecedentesRoutes from "./AntecedentesRoutes.js";
 
 const routes = (app) => {
   app.route("/").get((req, res) => {
@@ -11,7 +14,10 @@ const routes = (app) => {
     express.json(),
     ItensRoutes,
     UsersRoutes,
-    AuthRoutes     
+    AuthRoutes,
+    RacaRoutes,
+    ClasseRouter,
+    AntecedentesRoutes
   );
 };
 

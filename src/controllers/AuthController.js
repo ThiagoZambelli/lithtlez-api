@@ -19,7 +19,7 @@ class AuthController {
         res.status(202).send({ message: "Email ou senha Invalidos" });
       }
       const token = genereteToken(user._id);
-      res.status(200).send({token: token});
+      res.status(200).send({token});
     }
     catch (err) {
       next(err);
