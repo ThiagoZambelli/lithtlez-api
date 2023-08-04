@@ -4,5 +4,6 @@ import users from "./User.js";
 import Raca from "./Raca.js";
 import Classe from "./Classe.js";
 import Antecedentes from "./Antecedentes.js";
+import Personagem from "./Personagem.js";
 
-export {itens, users, Raca, Classe, Antecedentes};
+export { itens, users, Raca, Classe, Antecedentes, Personagem };

@@ -5,6 +5,7 @@ import AuthRoutes from "./AuthRoutes.js";
 import RacaRoutes from "./RacasRoutes.js";
 import ClasseRouter from "./ClasseRoutes.js";
 import AntecedentesRoutes from "./AntecedentesRoutes.js";
+import PersonagemRoutes from "./PersonagemRoutes.js";
 
 const routes = (app) => {
   app.route("/").get((req, res) => {
@@ -17,7 +18,8 @@ const routes = (app) => {
     AuthRoutes,
     RacaRoutes,
     ClasseRouter,
-    AntecedentesRoutes
+    AntecedentesRoutes,
+    PersonagemRoutes
   );
 };
 
