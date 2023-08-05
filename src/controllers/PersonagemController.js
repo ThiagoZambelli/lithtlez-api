@@ -17,12 +17,12 @@ class PersonagemController {
 
   static cadastraPersonagem = async (req, res, next) => {
     const personagem = new Personagem(req.body);
-    const idUser = req.params.idUser;
+    const idUser = req.userID;
     try {
-      const user = await users.findById(idUser);
+      let user = await users.findById(idUser);
       await personagem.save();
-      const favoritos = [...user.itensFavoritos,personagem.id];
-      await users.findByIdAndUpdate(idUser, { $set: favoritos }, { new: true });
+      const personagens = { personagens: [...user.personagens, personagem._id] };
+      await users.findByIdAndUpdate(idUser, { $set: personagens }, { new: true });
       res.status(201).send({ message: "perssonagem cadastrado!" });
     }
     catch (err) {
