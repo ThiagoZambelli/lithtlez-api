@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import HabilidadeSchema from "./Habilidade";
+import HabilidadeSchema from "./Habilidade.js";
 
 const PersonagemSchema = mongoose.Schema({
   nomePersonagem:{type:String, required:[true, "O nomePersonagem é requerido!"]},
