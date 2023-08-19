@@ -6,7 +6,7 @@ const router = Router();
 
 router
   .get("/personagem/:id", PersonagemController.pegaPersonagemId)
-  .get("/meusPersonagens",validacaoDeToken, PersonagemController.meusPersonagens)
+  .post("/meusPersonagens",validacaoDeToken, PersonagemController.meusPersonagens)
   .post("/personagem", validacaoDeToken, PersonagemController.cadastraPersonagem);
 
 export default router;
