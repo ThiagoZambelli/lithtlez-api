@@ -29,6 +29,29 @@ class PersonagemController {
       next(err);
     }
   };
+  static meusPersonagens = async (req, res, next) => {
+    const idUser = req.userID;
+    try {
+      const personagens = await users.findById(idUser).populate({
+        path: "personagens",
+        populate: [
+          {
+            path: "raca",
+          },
+          {
+            path: "classe",
+          },
+          {
+            path: "antecedente",
+          },
+        ],
+      });
+      res.status(200).json(personagens.personagens);
+    }
+    catch (err) {
+      next(err);
+    }
+  };
 }
 
 export default PersonagemController;
