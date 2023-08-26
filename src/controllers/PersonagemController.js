@@ -1,6 +1,23 @@
 import { Personagem, users } from "../models/index.js";
 
 class PersonagemController {
+  static atualizaAtributo = async (req, res, next) => {
+    const { atributos, id } = req.body;
+    try {
+      const personagemAtualizado = await Personagem.findByIdAndUpdate(
+        id,
+        { atributos },
+        { new: true }
+      );
+      if(!personagemAtualizado){
+        res.status(404).send({menssage:"Personagem não encontrado"});
+      }
+      res.status(200).send({menssage:"Atualizado com sucesso"});
+    }
+    catch (err) {
+      next(err);
+    }
+  };
   static pegaPersonagemId = async (req, res, next) => {
     const id = req.params.id;
     try {
