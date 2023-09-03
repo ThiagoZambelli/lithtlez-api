@@ -18,6 +18,23 @@ class PersonagemController {
       next(err);
     }
   };
+  static atualizaImg = async (req, res, next) => {
+    const { img, id } = req.body;
+    try {
+      const personagemAtualizado = await Personagem.findByIdAndUpdate(
+        id,
+        { img },
+        { new: true }
+      );
+      if(!personagemAtualizado){
+        res.status(404).send({menssage:"Personagem não encontrado"});
+      }
+      res.status(200).send({menssage:"Atualizado com sucesso"});
+    }
+    catch (err) {
+      next(err);
+    }
+  };
   static pegaPersonagemId = async (req, res, next) => {
     const id = req.params.id;
     try {

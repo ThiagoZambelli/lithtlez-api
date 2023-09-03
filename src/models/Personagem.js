@@ -19,6 +19,7 @@ const PersonagemSchema = mongoose.Schema({
     }
   },
   atributos: { type: [Number], validate: [atributosValidator, "Os atributos devem ter 6 números"] },
+  img: { type: String},
   classe: { type: mongoose.Schema.Types.ObjectId, ref: "classe", required: true },
   antecedente: { type: mongoose.Schema.Types.ObjectId, ref: "antecedente", required: true },
 });
