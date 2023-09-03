@@ -3,7 +3,7 @@ import { New } from "../models/index.js";
 class NewController {
   static listaNews = async (req, res, next) => {
     try {
-      const lista = await New.find().sort({ nome: 1 });
+      const lista = await New.find().sort({ nome: -1 });
       res.status(200).json(lista);
     }
     catch (err) {
