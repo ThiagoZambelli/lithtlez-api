@@ -9,6 +9,7 @@ router
   .post("/meusPersonagens",validacaoDeToken, PersonagemController.meusPersonagens)
   .patch("/atualizaAtributo",validacaoDeToken, PersonagemController.atualizaAtributo)
   .patch("/atualizaImg",validacaoDeToken, PersonagemController.atualizaImg)
+  .patch("/atualizaPericias",validacaoDeToken, PersonagemController.atualizaPericias)
   .post("/personagem", validacaoDeToken, PersonagemController.cadastraPersonagem);
 
 export default router;
