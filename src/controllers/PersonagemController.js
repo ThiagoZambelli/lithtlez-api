@@ -35,6 +35,25 @@ class PersonagemController {
       next(err);
     }
   };
+  static atualizaTextos = async (req, res, next) => {
+    const { texto, valor, id } = req.body;
+    const mudanca = {};
+    mudanca[texto] = valor;
+    try {
+      const personagemAtualizado = await Personagem.findByIdAndUpdate(
+        id,
+        mudanca,
+        { new: true }
+      );
+      if(!personagemAtualizado){
+        res.status(404).send({menssage:"Personagem não encontrado"});
+      }
+      res.status(200).send({menssage:"Atualizado com sucesso"});
+    }
+    catch (err) {
+      next(err);
+    }
+  };
   static atualizaImg = async (req, res, next) => {
     const { img, id } = req.body;
     try {
