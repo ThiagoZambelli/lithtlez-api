@@ -88,6 +88,7 @@ class PersonagemController {
 
   static cadastraPersonagem = async (req, res, next) => {
     const personagem = new Personagem(req.body);
+    personagem.atributos = [10, 10, 10, 10, 10, 10];
     const idUser = req.userID;
     try {
       let user = await users.findById(idUser);
