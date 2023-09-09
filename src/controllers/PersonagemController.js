@@ -36,9 +36,9 @@ class PersonagemController {
     }
   };
   static atualizaPersonagem = async (req, res, next) => {
-    const { texto, valor, id } = req.body;
+    const { campo, valor, id } = req.body;
     const mudanca = {};
-    mudanca[texto] = valor;
+    mudanca[campo] = valor;
     try {
       const personagemAtualizado = await Personagem.findByIdAndUpdate(
         id,
