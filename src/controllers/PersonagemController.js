@@ -35,7 +35,7 @@ class PersonagemController {
       next(err);
     }
   };
-  static atualizaTextos = async (req, res, next) => {
+  static atualizaPersonagem = async (req, res, next) => {
     const { texto, valor, id } = req.body;
     const mudanca = {};
     mudanca[texto] = valor;
@@ -54,6 +54,7 @@ class PersonagemController {
       next(err);
     }
   };
+
   static atualizaImg = async (req, res, next) => {
     const { img, id } = req.body;
     try {

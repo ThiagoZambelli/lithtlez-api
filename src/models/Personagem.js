@@ -5,6 +5,16 @@ const PersonagemSchema = mongoose.Schema({
   nomePersonagem: { type: String, required: [true, "O nomePersonagem é requerido!"] },
   nomeJogador: { type: String, required: [true, "O nomeJogador é requerido!"] },
   raca: { type: mongoose.Schema.Types.ObjectId, ref: "races", required: true },
+  atributos: { type: [Number], validate: [atributosValidator, "Os atributos devem ter 6 números"] },
+  pericias: { type: [String] },
+  vinculo: { type: String },
+  ideais: { type: String },
+  fraqueza: { type: String },
+  tracoDePersonalidade: { type: String },
+  vida: { type: Number },
+  img: { type: String },
+  classe: { type: mongoose.Schema.Types.ObjectId, ref: "classe", required: true },
+  antecedente: { type: mongoose.Schema.Types.ObjectId, ref: "antecedente", required: true },
   subRaca: {
     type: {
       nome: {
@@ -18,15 +28,6 @@ const PersonagemSchema = mongoose.Schema({
       habilidades: [HabilidadeSchema]
     }
   },
-  atributos: { type: [Number], validate: [atributosValidator, "Os atributos devem ter 6 números"] },
-  pericias: { type: [String]},
-  vinculo: { type: String},
-  ideais: { type: String},
-  fraqueza: { type: String},
-  tracoDePersonalidade: { type: String},
-  img: { type: String},
-  classe: { type: mongoose.Schema.Types.ObjectId, ref: "classe", required: true },
-  antecedente: { type: mongoose.Schema.Types.ObjectId, ref: "antecedente", required: true },
 });
 
 function atributosValidator(val) {
