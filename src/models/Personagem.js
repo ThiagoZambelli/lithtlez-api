@@ -12,7 +12,7 @@ const PersonagemSchema = mongoose.Schema({
   fraqueza: { type: String },
   tracoDePersonalidade: { type: String },
   vida: { type: Number },
-  lvl: { type: Number },
+  lvl: { type: Number, default: 1},
   img: { type: String },
   classe: { type: mongoose.Schema.Types.ObjectId, ref: "classe", required: true },
   antecedente: { type: mongoose.Schema.Types.ObjectId, ref: "antecedente", required: true },
