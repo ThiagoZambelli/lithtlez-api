@@ -6,5 +6,6 @@ import Classe from "./Classe.js";
 import Antecedentes from "./Antecedentes.js";
 import Personagem from "./Personagem.js";
 import New from "./New.js";
+import Conto from "./Conto.js";
 
-export { itens, users, Raca, Classe, Antecedentes, Personagem, New};
+export { itens, users, Raca, Classe, Antecedentes, Personagem, New, Conto};

@@ -85,7 +85,6 @@ class PersonagemController {
       next(err);
     }
   };
-
   static cadastraPersonagem = async (req, res, next) => {
     const personagem = new Personagem(req.body);
     personagem.atributos = [10, 10, 10, 10, 10, 10];
@@ -100,7 +99,7 @@ class PersonagemController {
     catch (err) {
       next(err);
     }
-  };
+  }; 
   static meusPersonagens = async (req, res, next) => {
     const idUser = req.userID;
     try {
@@ -124,6 +123,7 @@ class PersonagemController {
       next(err);
     }
   };
+
 }
 
 export default PersonagemController;
