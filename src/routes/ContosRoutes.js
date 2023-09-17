@@ -5,6 +5,7 @@ const router = Router();
 
 router
   .get("/contos", ContosController.listaContos)
+  .post("/conto/:id", ContosController.novoCapitulo)
   .post("/conto", ContosController.salvaConto);
 
 export default router;
