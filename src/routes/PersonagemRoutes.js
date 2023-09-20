@@ -11,7 +11,7 @@ router
   .patch("/atualizaImg",validacaoDeToken, PersonagemController.atualizaImg)
   .patch("/atualizaPericias",validacaoDeToken, PersonagemController.atualizaPericias)
   .patch("/atualizaPersonagem",validacaoDeToken, PersonagemController.atualizaPersonagem)
-  .patch("/deletaPersonagem",validacaoDeToken, PersonagemController.deletarPersonagem)
+  .patch("/deletaPersonagem/:id",validacaoDeToken, PersonagemController.deletarPersonagem)
   .post("/personagem", validacaoDeToken, PersonagemController.cadastraPersonagem);
 
 export default router;

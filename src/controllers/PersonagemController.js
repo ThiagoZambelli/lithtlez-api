@@ -123,7 +123,7 @@ class PersonagemController {
     }
   };
   static deletarPersonagem = async (req, res, next) => {
-    const id = req.body;
+    const id = req.params.id;
     const idUser = req.userID;
     try {
       let user = await users.findById(idUser);
