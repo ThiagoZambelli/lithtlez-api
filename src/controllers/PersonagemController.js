@@ -9,10 +9,10 @@ class PersonagemController {
         { atributos },
         { new: true }
       );
-      if(!personagemAtualizado){
-        res.status(404).send({menssage:"Personagem não encontrado"});
+      if (!personagemAtualizado) {
+        res.status(404).send({ menssage: "Personagem não encontrado" });
       }
-      res.status(200).send({menssage:"Atualizado com sucesso"});
+      res.status(200).send({ menssage: "Atualizado com sucesso" });
     }
     catch (err) {
       next(err);
@@ -26,10 +26,10 @@ class PersonagemController {
         { pericias },
         { new: true }
       );
-      if(!personagemAtualizado){
-        res.status(404).send({menssage:"Personagem não encontrado"});
+      if (!personagemAtualizado) {
+        res.status(404).send({ menssage: "Personagem não encontrado" });
       }
-      res.status(200).send({menssage:"Atualizado com sucesso"});
+      res.status(200).send({ menssage: "Atualizado com sucesso" });
     }
     catch (err) {
       next(err);
@@ -45,16 +45,15 @@ class PersonagemController {
         mudanca,
         { new: true }
       );
-      if(!personagemAtualizado){
-        res.status(404).send({menssage:"Personagem não encontrado"});
+      if (!personagemAtualizado) {
+        res.status(404).send({ menssage: "Personagem não encontrado" });
       }
-      res.status(200).send({menssage:"Atualizado com sucesso"});
+      res.status(200).send({ menssage: "Atualizado com sucesso" });
     }
     catch (err) {
       next(err);
     }
   };
-
   static atualizaImg = async (req, res, next) => {
     const { img, id } = req.body;
     try {
@@ -63,10 +62,10 @@ class PersonagemController {
         { img },
         { new: true }
       );
-      if(!personagemAtualizado){
-        res.status(404).send({menssage:"Personagem não encontrado"});
+      if (!personagemAtualizado) {
+        res.status(404).send({ menssage: "Personagem não encontrado" });
       }
-      res.status(200).send({menssage:"Atualizado com sucesso"});
+      res.status(200).send({ menssage: "Atualizado com sucesso" });
     }
     catch (err) {
       next(err);
@@ -99,7 +98,7 @@ class PersonagemController {
     catch (err) {
       next(err);
     }
-  }; 
+  };
   static meusPersonagens = async (req, res, next) => {
     const idUser = req.userID;
     try {
@@ -118,6 +117,30 @@ class PersonagemController {
         ],
       });
       res.status(200).json(personagens.personagens);
+    }
+    catch (err) {
+      next(err);
+    }
+  };
+  static deletarPersonagem = async (req, res, next) => {
+    const id = req.body;
+    const idUser = req.userID;
+    try {
+      let user = await users.findById(idUser);
+      const personagemIndex = user.personagens.indexOf(id);
+
+      if (personagemIndex !== -1) {
+        // Se o personagem estiver na lista, remove-o
+        user.personagens.splice(personagemIndex, 1);
+        // Salva o usuário atualizado
+        await user.save();
+        // Remove o personagem do banco de dados
+        await Personagem.findByIdAndRemove(id);
+        res.status(200).send({ message: "Personagem removido com sucesso!" });
+      }
+      else {
+        res.status(404).send({ message: "Personagem não encontrado na lista do usuário." });
+      }
     }
     catch (err) {
       next(err);
