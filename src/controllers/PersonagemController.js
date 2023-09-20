@@ -126,17 +126,19 @@ class PersonagemController {
     const id = req.params.id;
     const idUser = req.userID;
     try {
+      console.log(idUser);
       let user = await users.findById(idUser);
       const personagemIndex = user.personagens.indexOf(id);
-
       if (personagemIndex !== -1) {
         // Se o personagem estiver na lista, remove-o
-        user.personagens.splice(personagemIndex, 1);
-        // Salva o usuário atualizado
-        await user.save();
-        // Remove o personagem do banco de dados
-        await Personagem.findByIdAndRemove(id);
-        res.status(200).send({ message: "Personagem removido com sucesso!" });
+        const novalista = user.personagens.splice(personagemIndex, 1);
+        console.log(novalista);
+        await Personagem.findByIdAndUpdate(
+          id,
+          { personagens: novalista }
+        );
+        await Personagem.findByIdAndDelete(id);
+        res.status(200).send({ message: "Personagem deeltado com sucesso!" });
       }
       else {
         res.status(404).send({ message: "Personagem não encontrado na lista do usuário." });
