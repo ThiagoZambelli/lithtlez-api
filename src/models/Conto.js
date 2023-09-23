@@ -15,6 +15,7 @@ const ContoSchema = mongoose.Schema({
   id: { type: String },
   titulo: { type: String, required: [true, "O conto deve ter um Titulo"] },
   descricao: { type: String, required: [true, "O conto deve ter uma descricao"] },
+  tags: { type: [{ type: String }] },
   capitulos: [CapituloSchema],
   img: { type: String, required: [true, "O conto deve ter uma Imagem"] },
   curtidas: { type: [mongoose.Schema.Types.ObjectId], ref: "users" },
