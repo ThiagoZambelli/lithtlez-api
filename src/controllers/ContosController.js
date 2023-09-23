@@ -37,6 +37,19 @@ class ContosController {
       next(err);
     }
   };
+  static pegaPorId = async (req, res, next) => {
+    const id = req.params.id;    
+    try {
+      const conto = await Conto.findById(id);
+      if (!conto) {
+        return res.status(404).json({ message: "Conto não encontrado" });
+      }      
+      return res.status(200).json(conto);
+    }
+    catch (err) {
+      next(err);
+    }
+  };
 }
 
 

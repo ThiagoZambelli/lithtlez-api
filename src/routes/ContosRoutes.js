@@ -5,6 +5,7 @@ const router = Router();
 
 router
   .get("/contos", ContosController.listaContos)
+  .get("/conto/:id", ContosController.pegaPorId)
   .post("/conto/:id", ContosController.novoCapitulo)
   .post("/conto", ContosController.salvaConto);
 
