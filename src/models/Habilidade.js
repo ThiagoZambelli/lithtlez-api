@@ -8,6 +8,10 @@ const HabilidadeSchema = new mongoose.Schema({
   descricao: {
     type: String,
     required: true
+  },
+  origem: {
+    type: String,
+    required: true
   }
 });
 

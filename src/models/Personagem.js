@@ -11,6 +11,7 @@ const PersonagemSchema = mongoose.Schema({
   ideais: { type: String },
   fraqueza: { type: String },
   tracoDePersonalidade: { type: String },
+  habilidades: [HabilidadeSchema],
   vida: { type: Number },
   lvl: { type: Number, default: 1},
   img: { type: String },
