@@ -8,6 +8,7 @@ const CapituloSchema = new mongoose.Schema({
 const ComentarioSchema = new mongoose.Schema({
   id: { type: String },
   texto: { type: String },
+  nomeUser: { type: String },
   user: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
 });
 
