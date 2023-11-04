@@ -5,6 +5,6 @@ const router = Router();
 
 router
   .post("/comentario", ComentarioController.setComentario)
-  .delete("/comentario", ComentarioController.deletComentario);
+  .patch("/comentario", ComentarioController.deletComentario);
 
 export default router;
