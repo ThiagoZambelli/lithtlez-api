@@ -8,6 +8,7 @@ import AntecedentesRoutes from "./AntecedentesRoutes.js";
 import PersonagemRoutes from "./PersonagemRoutes.js";
 import NewRouter from "./NewRouters.js";
 import ContosRouter from "./ContosRoutes.js";
+import ComentarioRouter from "./ComentarioRoutes.js";
 
 const routes = (app) => {
   app.route("/").get((req, res) => {
@@ -23,7 +24,8 @@ const routes = (app) => {
     AntecedentesRoutes,
     PersonagemRoutes,
     NewRouter,
-    ContosRouter
+    ContosRouter,
+    ComentarioRouter
   );
 };
 

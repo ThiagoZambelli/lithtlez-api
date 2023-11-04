@@ -9,7 +9,7 @@ const ComentarioSchema = new mongoose.Schema({
   id: { type: String },
   texto: { type: String },
   nomeUser: { type: String },
-  user: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
+  idUser: { type: mongoose.Schema.Types.ObjectId, ref: "users" },
 });
 
 const ContoSchema = mongoose.Schema({
