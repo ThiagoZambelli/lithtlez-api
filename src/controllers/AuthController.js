@@ -20,7 +20,7 @@ class AuthController {
       }
       const token = genereteToken(user._id);
 
-      res.status(200).send({ token, nome: user.nome });
+      res.status(200).send({ token, nome: user.nome, id: user._id });
     }
     catch (err) {
       next(err);
