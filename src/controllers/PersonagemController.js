@@ -74,7 +74,20 @@ class PersonagemController {
   static pegaPersonagemId = async (req, res, next) => {
     const id = req.params.id;
     try {
-      const personagem = await Personagem.findById(id);
+      const personagem = await Personagem.findById(id).populate({
+        path: "personagens",
+        populate: [
+          {
+            path: "raca",
+          },
+          {
+            path: "classe",
+          },
+          {
+            path: "antecedente",
+          },
+        ],
+      });
       if (!personagem) {
         res.status(200).send({ menssage: "ID não encontrado!" });
       }
