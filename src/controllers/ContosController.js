@@ -5,8 +5,7 @@ class ContosController {
     try {
       const lista = await Conto.find();
       res.status(200).json(lista);
-    }
-    catch (err) {
+    } catch (err) {
       next(err);
     }
   };
@@ -15,15 +14,14 @@ class ContosController {
     try {
       await conto.save();
       res.status(201).send({ menssage: "Conto Cadastrado" });
-    }
-    catch (err) {
+    } catch (err) {
       next(err);
     }
   };
   static novoCapitulo = async (req, res, next) => {
     const id = req.params.id;
-    const {tituloCap, conteudo} = req.body;
-    const novoCapitulo = {tituloCap, conteudo};
+    const { tituloCap, conteudo } = req.body;
+    const novoCapitulo = { tituloCap, conteudo };
     try {
       const conto = await Conto.findById(id);
       if (!conto) {
@@ -31,26 +29,43 @@ class ContosController {
       }
       conto.capitulos.push(novoCapitulo);
       await conto.save();
-      return res.status(201).send({menssage:"Capitulo Cadastrado!"});
-    }
-    catch (err) {
+      return res.status(201).send({ menssage: "Capitulo Cadastrado!" });
+    } catch (err) {
       next(err);
     }
   };
   static pegaPorId = async (req, res, next) => {
-    const id = req.params.id;    
+    const id = req.params.id;
     try {
       const conto = await Conto.findById(id);
       if (!conto) {
         return res.status(404).json({ message: "Conto não encontrado" });
-      }      
+      }
       return res.status(200).json(conto);
+    } catch (err) {
+      next(err);
     }
-    catch (err) {
+  };
+  static likeConto = async (req, res, next) => {
+    const contoId = req.params.id;
+    const idUser = req.userID;
+    try {
+      const conto = await Conto.findById(contoId);
+      if (!conto) {
+        res.status(404).send({ message: "Conto não encontrado!" });
+      }
+      if (conto.curtidas.includes(idUser)) {
+        let indexToRemove = conto.indexOf(idUser);
+        conto.splice(indexToRemove, 1);
+      } else {
+        conto.curtidas.push(idUser);
+      }
+      await conto.save();
+      return res.status(201).send({ message: "Like ok" });
+    } catch (err) {
       next(err);
     }
   };
 }
-
 
 export default ContosController;
