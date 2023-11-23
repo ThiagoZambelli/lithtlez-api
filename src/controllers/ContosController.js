@@ -55,7 +55,7 @@ class ContosController {
         res.status(404).send({ message: "Conto não encontrado!" });
       }
       if (conto.curtidas.includes(idUser)) {
-        let indexToRemove = conto.indexOf(idUser);
+        let indexToRemove = conto.curtidas.indexOf(idUser);
         conto.curtidas.splice(indexToRemove, 1);
       } else if (!conto.curtidas.includes(idUser)) {
         conto.curtidas.push(idUser);
