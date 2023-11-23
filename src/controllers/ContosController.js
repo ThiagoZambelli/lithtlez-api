@@ -56,8 +56,8 @@ class ContosController {
       }
       if (conto.curtidas.includes(idUser)) {
         let indexToRemove = conto.indexOf(idUser);
-        conto.splice(indexToRemove, 1);
-      } else {
+        conto.curtidas.splice(indexToRemove, 1);
+      } else if (!conto.curtidas.includes(idUser)) {
         conto.curtidas.push(idUser);
       }
       await conto.save();

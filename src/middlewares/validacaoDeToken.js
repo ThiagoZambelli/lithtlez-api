@@ -18,7 +18,7 @@ function validacaoDeToken(req, res, next) {
     const [schema, token] = parts;
 
     if (schema !== "Bearer" || parts.length !== 2) {
-      return res.send(401);
+      return res.send(401).send({ message: "Ta parando aqui" });
     }
 
     jwt.verify(token, process.env.SECRET_JWT, async (err, decoded) => {
