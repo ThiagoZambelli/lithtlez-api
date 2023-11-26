@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema(
     //                      faz com que o campo n seja apresentado em uma pesquisa
     senha: { type: String, select: false, required: [true, "A senha é obrigatório"] },
     itensFavoritos: { type: [mongoose.Schema.Types.ObjectId], ref: "itens" },
+    contosFavoritos: { type: [mongoose.Schema.Types.ObjectId], ref: "contos" },
     personagens: { type: [mongoose.Schema.Types.ObjectId], ref: "personagem" },
     // 
     endereco: { type: String, required: [false, "O endereço é obrigatório"] },
@@ -19,7 +20,16 @@ const userSchema = new mongoose.Schema(
 );
 
 userSchema.pre("save", async function (next) {
-  this.senha = await bcrypt.hash(this.senha, 10);
+  // Verifica se a senha foi fornecida ou se já foi hashed (flag hashPasswordProvided)
+  if (this.isModified("senha") && !this.hashPasswordProvided) {
+    try {
+      const saltRounds = 10;
+      this.senha = await bcrypt.hash(this.senha, saltRounds);
+      this.hashPasswordProvided = true; // Adiciona a flag
+    } catch (error) {
+      return next(error);
+    }
+  }
   next();
 });
 

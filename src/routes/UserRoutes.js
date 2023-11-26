@@ -1,10 +1,13 @@
-import express from "express";
+import { Router } from "express";
 import UserController from "../controllers/UserController.js";
+import validacaoDeToken from "../middlewares/validacaoDeToken.js";
 
-const router = express.Router();
+const router = Router();
 
 router
   .get("/user", UserController.validarUser)
+  .get("/contosFavoritos", validacaoDeToken, UserController.favoritosContos)
+  .patch("/favoritarConto", validacaoDeToken, UserController.favoritarConto)
   .post("/user", UserController.cadastrarUser);
 
 export default router;
