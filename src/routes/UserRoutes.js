@@ -7,6 +7,7 @@ const router = Router();
 router
   .get("/user", UserController.validarUser)
   .get("/contosFavoritos", validacaoDeToken, UserController.favoritosContos)
+  .get("/listaContosFavoritos", validacaoDeToken, UserController.listaContosFavoritos)
   .patch("/favoritarConto", validacaoDeToken, UserController.favoritarConto)
   .post("/user", UserController.cadastrarUser);
 

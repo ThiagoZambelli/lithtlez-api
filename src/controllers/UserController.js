@@ -83,6 +83,19 @@ class UserController {
       next(err);
     }
   };
+  static listaContosFavoritos = async (req, res, next) => {
+    const idUser = req.userID;
+    try {
+      const user = await users.findById(idUser);
+      if (!user) {
+        res.status(404).send({ message: "User não encontrado!" });
+      } else {        
+        return res.status(201).json(user.contosFavoritos);
+      }
+    } catch (err) {
+      next(err);
+    }
+  };
 }
 
 export default UserController;
