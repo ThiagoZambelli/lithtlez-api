@@ -1,5 +1,5 @@
 import PaginaNaoEncontrada from "../erros/PaginaNaoEncontrada.js";
-import { users } from "../models/index.js";
+import { Conto, users } from "../models/index.js";
 
 class UserController {
   static validarUser = async (req, res, next) => {
@@ -74,8 +74,9 @@ class UserController {
         res.status(404).send({ message: "User não encontrado!" });
       } else {
         const contosFavoritos = [];
-        user.contosFavoritos.forEach((contoFavorito) => {
-          contosFavoritos.push(contoFavorito);
+        user.contosFavoritos.forEach(async (contoFavorito) => {
+          const novoConto = await Conto.findById(contoFavorito);
+          contosFavoritos.push(novoConto);
         });
         return res.status(201).json(contosFavoritos);
       }
