@@ -71,19 +71,20 @@ class UserController {
     try {
       const user = await users.findById(idUser);
       if (!user) {
-        res.status(404).send({ message: "User não encontrado!" });
-      } else {
-        const contosFavoritos = [];
-        user.contosFavoritos.forEach(async (contoFavorito) => {
-          const novoConto = await Conto.findById(contoFavorito);
-          contosFavoritos.push(novoConto);
-        });
-        return res.status(201).json(contosFavoritos);
+        return res.status(404).send({ message: "User não encontrado!" });
       }
+  
+      const contosFavoritosPromises = user.contosFavoritos.map(async (contoFavorito) => {
+        const novoConto = await Conto.findById(contoFavorito);
+        return novoConto;
+      });  
+      const contosFavoritos = await Promise.all(contosFavoritosPromises);      
+      return res.status(201).json(contosFavoritos);
     } catch (err) {
       next(err);
     }
   };
+  
   static listaContosFavoritos = async (req, res, next) => {
     const idUser = req.userID;
     try {
