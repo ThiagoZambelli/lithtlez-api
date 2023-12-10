@@ -98,6 +98,19 @@ class UserController {
       next(err);
     }
   };
+
+  static meuPerfil = async (req, res, next) => {
+    const idUser = req.userID;
+    try {
+      const user = await users.findById(idUser);
+      if (!user) {
+        return res.status(404).send({ message: "User não encontrado!" });
+      }           
+      return res.status(201).json(user);
+    } catch (err) {
+      next(err);
+    }
+  };
 }
 
 export default UserController;
