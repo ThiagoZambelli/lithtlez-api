@@ -114,6 +114,18 @@ class UserController {
             { path: "antecedente" },
           ],
         })
+        .populate({
+          path: "contosFavoritos",
+          populate: [
+            {
+              path: "curtidas",
+            },
+            {
+              path: "capitulos",
+              model: "Capitulo", // Substitua "Capitulo" pelo nome correto do modelo de capítulo
+            },
+          ],
+        })
         .exec();
 
       if (!user) {
