@@ -73,25 +73,27 @@ class UserController {
       if (!user) {
         return res.status(404).send({ message: "User não encontrado!" });
       }
-  
-      const contosFavoritosPromises = user.contosFavoritos.map(async (contoFavorito) => {
-        const novoConto = await Conto.findById(contoFavorito);
-        return novoConto;
-      });  
-      const contosFavoritos = await Promise.all(contosFavoritosPromises);      
+
+      const contosFavoritosPromises = user.contosFavoritos.map(
+        async (contoFavorito) => {
+          const novoConto = await Conto.findById(contoFavorito);
+          return novoConto;
+        }
+      );
+      const contosFavoritos = await Promise.all(contosFavoritosPromises);
       return res.status(201).json(contosFavoritos);
     } catch (err) {
       next(err);
     }
   };
-  
+
   static listaContosFavoritos = async (req, res, next) => {
     const idUser = req.userID;
     try {
       const user = await users.findById(idUser);
       if (!user) {
         res.status(404).send({ message: "User não encontrado!" });
-      } else {        
+      } else {
         return res.status(201).json(user.contosFavoritos);
       }
     } catch (err) {
@@ -102,11 +104,23 @@ class UserController {
   static meuPerfil = async (req, res, next) => {
     const idUser = req.userID;
     try {
-      const user = await users.findById(idUser);
+      const user = await users
+        .findById(idUser)
+        .populate({
+          path: "personagens",
+          populate: [
+            { path: "raca" },
+            { path: "classe" },
+            { path: "antecedente" },
+          ],
+        })
+        .exec();
+
       if (!user) {
         return res.status(404).send({ message: "User não encontrado!" });
-      }           
-      return res.status(201).json(user);
+      }
+
+      return res.status(200).json(user);
     } catch (err) {
       next(err);
     }
