@@ -9,6 +9,7 @@ import PersonagemRoutes from "./PersonagemRoutes.js";
 import NewRouter from "./NewRouters.js";
 import ContosRouter from "./ContosRoutes.js";
 import ComentarioRouter from "./ComentarioRoutes.js";
+import OpinioesRoutes from "./OpinioesRoutes.js";
 
 const routes = (app) => {
   app.route("/").get((req, res) => {
@@ -25,7 +26,8 @@ const routes = (app) => {
     PersonagemRoutes,
     NewRouter,
     ContosRouter,
-    ComentarioRouter
+    ComentarioRouter,
+    OpinioesRoutes
   );
 };
 
